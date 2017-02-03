@@ -1,0 +1,24 @@
+{
+  "av.by": {
+    "url": "https://cars.av.by/",
+    "selectors": {
+      "pagesRoot": ".pages-numbers",
+      "allPages": "ul > li > a",
+      "activePage": "ul > li.pages-numbers-item--active > a",
+      "cardInfoList": ".card-info > ul > li > dl"
+    },
+    "cardOptions": {
+      "пробег": "mileage",
+      "годвыпуска": "year",
+      "состояние": "state",
+      "типтоплива": "fuelType",
+      "объем": "engineCapacity",
+      "цвет": "color",
+      "типкузова": "bodyType",
+      "дверей": "doors",
+      "трансмиссия": "transmission",
+      "привод": "drive"
+    }
+
+  }
+}

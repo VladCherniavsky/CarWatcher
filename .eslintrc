@@ -1,0 +1,40 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parser": "babel-eslint",
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "comma-dangle": [
+      "error",
+      "never"
+    ],
+    "no-console":0,
+    "no-undef": 0
+//    "require-jsdoc": [
+//      "error",
+//      {
+//        "require": {
+//          "FunctionDeclaration": true,
+//          "MethodDefinition": true,
+//          "ClassDeclaration": true
+//        }
+//      }
+//    ],
+//    "valid-jsdoc": [
+//      "error",
+//      {
+//        "requireReturnDescription": true,
+//        "requireParamDescription": true,
+//        "requireReturnType": true,
+//        "prefer": {
+//          "arg": "param",
+//          "argument": "param",
+//          "class": "constructor",
+//          "return": "returns",
+//          "virtual": "abstract"
+//        }
+//      }
+//    ]
+  }
+}

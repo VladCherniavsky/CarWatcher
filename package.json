@@ -1,0 +1,47 @@
+{
+  "name": "vlad.cherniavsky",
+  "version": "1.0.0",
+  "main": "app",
+  "repository": "https://github.com/VladCherniavsky/CarWatch.git",
+  "author": "vladcherniavsky <vlad.cherniavsky@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "npm-run-all --parallel  start:server lint:watch",
+    "start:nodemon": "nodemon app.js --exec babel-node",
+    "start:server": "babel-node app.js ",
+    "lint": "node_modules/.bin/esw  --fix",
+    "lint:watch": "npm run lint -- --watch",
+    "lint:build": "eslint ./**/*.js",
+    "docs": "./node_modules/.bin/jsdoc -r -c ./doc_conf.json -d docs",
+    "test": "mocha --compilers js:babel-core/register  --reporter spec  utils/**/*.test.js",
+    "coverage": "istanbul cover node_modules/mocha/bin/_mocha -- -R spec  --compilers js:babel-core/register --recursive  utils/**/*.test.js"
+  },
+  "pre-commit": [
+    "lint:build",
+    "test"
+  ],
+  "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-eslint": "^7.1.1",
+    "babel-preset-es2017-node7": "^0.4.1",
+    "babel-preset-stage-3": "^6.22.0",
+    "chai": "^3.5.0",
+    "cheerio": "^0.22.0",
+    "eslint": "^3.14.0",
+    "eslint-config-google": "^0.7.1",
+    "eslint-watch": "^2.1.14",
+    "global": "^4.3.1",
+    "istanbul": "^0.4.5",
+    "jsdoc": "^3.4.3",
+    "loopback-cli": "^1.0.0",
+    "mocha": "^3.2.0",
+    "nconf": "^0.8.4",
+    "nodemon": "^1.11.0",
+    "pre-commit": "^1.2.2",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.0.1"
+  }
+}
